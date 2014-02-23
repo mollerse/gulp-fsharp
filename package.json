@@ -1,0 +1,39 @@
+{
+  "name": "gulp-fsharp",
+  "version": "0.1.0",
+  "description": "A Gulp plugin for calling F# scripts",
+  "keywords": [
+    "gulpplugin",
+    "fsharp",
+    "f#"
+  ],
+  "author": {
+    "name": "Stian Veum Møllersen",
+    "email": "stian.moellersen@gmail.com",
+    "url": "https://github.com/mollerse"
+  },
+  "repository": "mollerse/gulp-fsharp",
+  "scripts": {
+    "test": "./node_modules/.bin/istanbul test ./node_modules/.bin/_mocha --report html -- test/*.js --reporter spec",
+    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -R spec && rm -rf ./coverage"
+  },
+  "dependencies": {
+    "through2": "*",
+    "gulp-util": "~2.2.0",
+    "fsharp": "~0.1.4",
+    "event-stream": "~3.1.0"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "mocha-lcov-reporter": "*",
+    "istanbul": "*",
+    "sinon": "~1.8.2",
+    "chai": "~1.9.0",
+    "require-subvert": "0.0.3"
+  },
+  "engines": {
+    "node": ">=0.10.0",
+    "npm": ">=1.2.10"
+  },
+  "license": "MIT"
+}
